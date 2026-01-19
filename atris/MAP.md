@@ -7,51 +7,91 @@
 ## Quick Search
 
 ```bash
-# Find a skill
-rg "name:" skills/
+# Find all skills
+rg "name:" skills/*/SKILL.md
 
-# Find pattern definitions
+# Find pattern definitions (copy-editor)
 rg "###.*\d+\." skills/copy-editor/SKILL.md
 
-# Find checklist
-rg "\[ \]" skills/copy-editor/SKILL.md
+# Find checklists
+rg "\[ \]" skills/
 ```
 
 ---
 
 ## Project Overview
 
-**What:** A collection of AI agent skills for writing tasks. Each skill does one job.
+**What:** Three AI agent skills for writing tasks. Plan, write, review.
 
 **Structure:**
 ```
 writing_team/
-├── README.md                      ← project overview, installation
+├── README.md
 ├── skills/
-│   └── copy-editor/
-│       ├── README.md              ← skill docs, usage examples
-│       └── SKILL.md               ← the actual skill (25 patterns)
-└── atris/                         ← workspace (MAP, TODO, logs)
+│   ├── planner/           ← outline, research, structure
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   ├── writer/            ← draft with voice
+│   │   ├── README.md
+│   │   └── SKILL.md
+│   └── copy-editor/       ← review, fix AI patterns
+│       ├── README.md
+│       └── SKILL.md
+└── atris/
 ```
 
 ---
 
-## By Feature
+## Workflow
 
-### Skills
+```
+planner → writer → copy-editor
+ (what)   (draft)   (review)
+```
 
-| Skill | Location | Status |
-|-------|----------|--------|
-| copy-editor | `skills/copy-editor/SKILL.md` | Ready |
-| drafter | — | Planned |
-| researcher | — | Planned |
-| reviewer | — | Planned |
+---
 
-### copy-editor internals
+## Skills
+
+| Skill | Location | Triggers |
+|-------|----------|----------|
+| planner | `skills/planner/SKILL.md` | plan this, outline, research |
+| writer | `skills/writer/SKILL.md` | write this, draft this |
+| copy-editor | `skills/copy-editor/SKILL.md` | copy edit, review writing |
+
+---
+
+## Skill Internals
+
+### planner
 
 | Section | Location |
 |---------|----------|
-| Frontmatter (triggers) | `skills/copy-editor/SKILL.md:1-11` |
+| Frontmatter | `skills/planner/SKILL.md:1-9` |
+| Goal Clarification | `skills/planner/SKILL.md:25-33` |
+| Audience Analysis | `skills/planner/SKILL.md:35-42` |
+| Research Gathering | `skills/planner/SKILL.md:44-59` |
+| Outline Creation | `skills/planner/SKILL.md:61-85` |
+| Voice Definition | `skills/planner/SKILL.md:87-96` |
+| Output Format | `skills/planner/SKILL.md:100-120` |
+
+### writer
+
+| Section | Location |
+|---------|----------|
+| Frontmatter | `skills/writer/SKILL.md:1-9` |
+| Voice Over Correctness | `skills/writer/SKILL.md:25-40` |
+| Rhythm Is Structure | `skills/writer/SKILL.md:42-55` |
+| Specificity | `skills/writer/SKILL.md:57-72` |
+| Openings | `skills/writer/SKILL.md:74-88` |
+| Endings | `skills/writer/SKILL.md:90-100` |
+| Process | `skills/writer/SKILL.md:104-140` |
+
+### copy-editor
+
+| Section | Location |
+|---------|----------|
+| Frontmatter | `skills/copy-editor/SKILL.md:1-11` |
 | Personality & Soul | `skills/copy-editor/SKILL.md:29-59` |
 | Content Patterns (1-6) | `skills/copy-editor/SKILL.md:63-146` |
 | Language Patterns (7-12) | `skills/copy-editor/SKILL.md:149-224` |
@@ -59,25 +99,7 @@ writing_team/
 | Communication Patterns (19-21) | `skills/copy-editor/SKILL.md:307-346` |
 | Filler & Hedging (22-24) | `skills/copy-editor/SKILL.md:349-384` |
 | Rhythm Patterns (25) | `skills/copy-editor/SKILL.md:387-400` |
-| Process | `skills/copy-editor/SKILL.md:403-420` |
 | Pre-publish Checklist | `skills/copy-editor/SKILL.md:428-446` |
-
----
-
-## By Concern
-
-### Installation
-- Full team install: `README.md:41-44`
-- Single skill install: `README.md:46-50`
-- Claude Code path: `~/.claude/skills/`
-- Codex path: `~/.codex/skills/`
-
-### Skill Format
-- Frontmatter spec: `README.md:22-35`
-- Trigger system: `README.md:37`
-
-### Contributing
-- How to add a skill: `README.md:72-82`
 
 ---
 
@@ -85,27 +107,22 @@ writing_team/
 
 | File | Purpose |
 |------|---------|
-| ⭐ `skills/copy-editor/SKILL.md` | The main skill, 25 AI patterns |
-| `skills/copy-editor/README.md` | Skill documentation |
+| ⭐ `skills/planner/SKILL.md` | Outline and research skill |
+| ⭐ `skills/writer/SKILL.md` | Drafting skill with voice principles |
+| ⭐ `skills/copy-editor/SKILL.md` | 25 AI patterns + checklist |
 | `README.md` | Project overview, installation |
 
 ---
 
-## Planned Skills
+## By Concern
 
-| Skill | Purpose | Dependencies |
-|-------|---------|--------------|
-| drafter | Generate first drafts with voice | — |
-| researcher | Outline, gather sources | — |
-| reviewer | Final pass, fact-check | copy-editor |
+### Installation
+- Full team: `README.md:49-52`
+- Single skill: `README.md:54-58`
+- Claude Code path: `~/.claude/skills/`
+- Codex path: `~/.codex/skills/`
 
----
-
-## Workflow
-
-```
-researcher → drafter → copy-editor → reviewer
-   (plan)     (write)    (clean)      (verify)
-```
-
-Skills can be used independently or chained.
+### Triggers
+- planner: "plan this", "outline", "help me plan"
+- writer: "write this", "draft this", "start writing"
+- copy-editor: "copy edit", "review my writing", "humanize"

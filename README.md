@@ -1,82 +1,94 @@
 # writing_team
 
-Skills that work together on writing tasks.
+Three skills that work together on writing tasks.
 
 ## The idea
 
 One AI writing tool isn't enough. It either drafts (but misses errors) or edits (but can't create). You need a team.
 
-Each skill here does one job well. Use them alone or chain them together.
+```
+planner → writer → copy-editor
+ (what)   (draft)   (review)
+```
+
+Each skill does one job. Use them alone or chain them together.
 
 ## Skills
 
 | Skill | Job | Status |
 |-------|-----|--------|
-| [copy-editor](skills/copy-editor/) | Review and fix AI patterns, check rhythm, validate before publish | Ready |
-| drafter | Generate first drafts with voice and structure | Planned |
-| researcher | Gather sources, build outlines, fact-check claims | Planned |
-| reviewer | Final read, consistency check, publish approval | Planned |
+| [planner](skills/planner/) | Outline, research, structure | Ready |
+| [writer](skills/writer/) | Draft with voice and rhythm | Ready |
+| [copy-editor](skills/copy-editor/) | Review, detect AI patterns, transform | Ready |
 
-## How skills work
+## How it works
 
-A skill is a markdown file that tells an AI agent how to do one task. The format:
+**Planner** prepares:
+- Clarifies the goal
+- Analyzes the audience
+- Gathers research
+- Creates an outline
+- Defines the voice
 
-```markdown
----
-name: skill-name
-description: What it does
-triggers:
-  - words that activate it
----
+**Writer** drafts:
+- Follows the structure
+- Writes with voice (sounds human, has opinions)
+- Uses specific details
+- Varies rhythm
+- Flags gaps instead of making things up
 
-# Instructions
-
-The actual skill content...
-```
-
-When you say a trigger phrase, the agent loads the skill and follows its instructions.
+**Copy-editor** reviews:
+- Detects 25 AI writing patterns
+- Rewrites problematic sections
+- Checks rhythm (no staccato overcorrection)
+- Runs pre-publish checklist
+- Transforms slop into human writing
 
 ## Installation
 
-**Full team (recommended):**
+**Full team:**
 ```bash
 git clone https://github.com/keshav55/writing_team.git ~/.claude/skills/writing_team
 ```
 
 **Single skill:**
 ```bash
-mkdir -p ~/.claude/skills/copy-editor
-curl -o ~/.claude/skills/copy-editor/SKILL.md https://raw.githubusercontent.com/keshav55/writing_team/master/skills/copy-editor/SKILL.md
+mkdir -p ~/.claude/skills/planner
+curl -o ~/.claude/skills/planner/SKILL.md https://raw.githubusercontent.com/keshav55/writing_team/master/skills/planner/SKILL.md
 ```
 
 Works with Claude Code, Codex, Cursor, or any agent that reads skill files.
 
-## Chaining skills
+## Usage
 
-Use one skill or chain them:
+Say the trigger phrase:
 
-```
-researcher → drafter → copy-editor → reviewer
-```
+| To do this | Say |
+|------------|-----|
+| Plan a piece | "plan this", "outline", "help me plan" |
+| Write a draft | "write this", "draft this", "start writing" |
+| Review writing | "copy edit this", "review my writing" |
 
-Each skill hands off to the next. The copy-editor catches what the drafter missed. The reviewer catches what the copy-editor missed.
+Or chain them: "Plan, write, and copy-edit a post about X"
 
 ## Why this exists
 
-LLMs write slop by default. They pick statistically safe words, hedge everything, and structure text the same way every time. The output is technically correct but obviously fake.
+LLMs write slop by default. They pick statistically safe words, hedge everything, and structure text the same way every time.
 
-These skills encode what good writing actually looks like. Not rules to memorize, but patterns to detect and fix.
+These skills encode what good writing looks like:
+- **Planner** ensures you know what you're writing before you write it
+- **Writer** ensures the draft has voice, rhythm, and specifics
+- **Copy-editor** catches the AI patterns that slip through anyway
 
 ## Contributing
 
-Add a skill:
+Add or improve a skill:
 
-1. Create `skills/[name]/SKILL.md`
-2. Add a `skills/[name]/README.md` explaining what it does
-3. Update this README's skill table
-4. Submit a PR
+1. Create or edit `skills/[name]/SKILL.md`
+2. Update `skills/[name]/README.md`
+3. Submit a PR
 
 Each skill needs:
 - Clear single purpose
+- Process steps
 - Before/after examples
-- Checklist for validation
