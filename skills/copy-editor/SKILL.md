@@ -386,17 +386,32 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 ## RHYTHM PATTERNS
 
-### 25. Staccato Overcorrection
+### 25. Choppiness (Critical - Most Common Failure Mode)
 
-**Problem:** When avoiding AI patterns, LLMs often overcorrect into choppy, robotic prose. Five short fragments in a row is its own AI tell.
+**Problem:** When avoiding AI patterns, LLMs overcorrect into choppy, robotic prose. This is just as bad as slop. Short fragments piled together feel algorithmic, breathless, and exhausting to read. The reader needs connective tissue, subordinate clauses, sentences that take their time.
 
-**Rule:** Let one sentence breathe before landing the short punch. Rhythm needs contrast.
+**Rule:** Writing must FLOW. Read it aloud. If it sounds like a telegram or a bullet list converted to prose, rewrite it. At least half your sentences should have commas, subordinate clauses, or natural connective tissue.
 
-**Before:**
-> I spent a week convincing myself it mattered. Ran analytics. The numbers were clear. Twelve active users. Three of them were QA.
+**Signs of choppiness:**
+- More than two short sentences in a row
+- Every sentence under 10 words
+- No commas in a paragraph
+- Feels like reading a list
+- No "and", "but", "because", "which", "where", "when" connecting ideas
 
-**After:**
-> I spent a week digging through analytics, looking for any sign the feature mattered. Twelve active users. Three of them were QA.
+**Before (choppy, robotic):**
+> I spent a week convincing myself it mattered. Ran analytics. The numbers were clear. Twelve active users. Three of them were QA. I deleted the feature. Best decision I made.
+
+**After (flows naturally):**
+> I spent a week digging through analytics, convincing myself the feature mattered, but the numbers told a different story. Twelve active users, and three of them were QA. So I deleted it.
+
+**Before (choppy):**
+> One skill plans. It figures out the goal. One skill writes. It follows the plan. One skill reviews. It catches mistakes.
+
+**After (flows):**
+> One skill handles planning, figuring out the goal and structure before any prose gets written. Another skill drafts, following that plan while maintaining voice. A third skill reviews the draft and catches the patterns that slipped through.
+
+**The test:** Read your paragraph aloud. Does it sound like a person talking, or a robot listing facts? Humans use "and" and "but" and "because." Humans let sentences breathe with commas and clauses. If your writing sounds like telegraph messages, it's broken.
 
 ---
 
@@ -454,11 +469,13 @@ Run this check before approving ANY writing. LLMs will violate these rules even 
 [ ] No "serves as" / "stands as" (use "is")
 [ ] No vague attributions (experts say, studies show)
 [ ] No sycophancy (Great question!, You're absolutely right!)
-[ ] Sentence lengths vary (not all same rhythm)
-[ ] No staccato overcorrection (5+ short fragments in a row)
+[ ] NOT CHOPPY - flows when read aloud (MOST IMPORTANT)
+[ ] Has connective tissue (and, but, because, which, commas, clauses)
 [ ] At least one specific number, name, or concrete detail
 [ ] Ending is specific, not generic positivity
 ```
+
+**CHOPPINESS IS THE #1 FAILURE MODE.** If the writing sounds like a telegram or bullet points converted to prose, it fails regardless of other checks passing.
 
 If ANY box fails, rewrite that section and run the check again.
 

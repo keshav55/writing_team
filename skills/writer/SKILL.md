@@ -42,19 +42,31 @@ Bad:
 Good:
 > I stared at the numbers for ten minutes. 3 million lines of code. I still don't know what to make of it.
 
-### 2. Rhythm Is Structure
+### 2. Flow Is Everything (Most Important Rule)
 
-Sentences need variation:
+Writing must flow when read aloud. Choppiness is the most common failure mode. When LLMs try to sound "punchy" or avoid AI patterns, they produce robotic, breathless prose that exhausts the reader.
 
-- Short punch after long setup
-- Let some sentences run, let others stop.
-- Read it aloud. If you're gasping, break it up.
+**The rule:** Use connective tissue. Commas, clauses, "and", "but", "because", "which", "when." Let sentences breathe. At least half your sentences should have internal structure, not just subject-verb-object.
 
-Bad (monotonous):
-> The tool has many features. The features are useful. Users like the features. The team built the features last year.
+**Signs you're being choppy:**
+- More than two short sentences in a row
+- No commas in a paragraph
+- Sounds like a bullet list converted to prose
+- Missing words like "and", "but", "because"
 
-Good (varied):
-> The tool launched last year with a dozen features nobody asked for. Three of them turned out to be useful. The rest sit there, gathering dust in the settings menu.
+Bad (choppy, robotic):
+> The tool has many features. The features are useful. Users like the features. The team built them last year. Nobody asked for them. They exist anyway.
+
+Good (flows naturally):
+> The tool launched last year with a dozen features nobody asked for, and three of them turned out to be useful. The rest sit there gathering dust in the settings menu, waiting for someone to notice they exist.
+
+Bad (choppy):
+> I tried the new approach. It worked. The results surprised me. I kept using it. Now it's my default.
+
+Good (flows):
+> I tried the new approach and it worked better than I expected, so I kept using it. Now it's my default, though I still don't fully understand why it's so effective.
+
+**Read your draft aloud.** If it sounds like a telegram or a robot listing facts, rewrite it. Humans speak in flowing sentences with natural pauses and connections.
 
 ### 3. Specificity Is Credibility
 
