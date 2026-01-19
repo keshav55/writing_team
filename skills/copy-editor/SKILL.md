@@ -415,6 +415,44 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 ---
 
+### 26. Algorithmic Completeness (The Deeper Problem)
+
+**Problem:** AI writing is too complete. Everything balanced, everything explained, everything resolved. It's algorithmically satisfying, which is exactly what makes it feel fake. Good writing has gaps. It implies. It trusts the reader.
+
+**What detectors catch:**
+
+1. **Over-clarifying phrases** - "which is exactly the point", "that's the key thing", "this is why it matters"
+   - AI hedges to ensure understanding
+   - Fix: Trust the reader. Delete the explanation.
+
+2. **Symmetrical parallel structures** - "X in one place, Y in another", "not just A, but also B"
+   - Statistical preference for balance
+   - Fix: Make it asymmetric. Uneven is human.
+
+3. **Hidden threes** - Comma lists with exactly three items that aren't obviously "rule of three"
+   - Three feels rhetorically complete
+   - Fix: Use two items. Or four. Or just one.
+
+4. **Instructional voice** - Explaining what something does, how it works, why it matters
+   - Trained on documentation and tutorials
+   - Fix: Talk WITH the reader, not AT them. Conversational, not presentational.
+
+**Before (algorithmically complete):**
+> When I tested the review skill on my own writing, it found problems I'd completely missed even though I built the thing. Rule of three in one paragraph, choppy rhythm in another. The skill caught what I couldn't see while I was drafting, which is exactly the point.
+
+**After (human gaps):**
+> I ran the review skill on something I'd written and it flagged two patterns I missed. I built the thing and still couldn't see them while drafting.
+
+**What changed:**
+- Removed "which is exactly the point" (over-clarifying)
+- Removed the symmetrical "X in one, Y in another" structure
+- Didn't explain why this matters (trusted the reader)
+- Shorter, doesn't tie everything up
+
+**The principle:** Human writing is incomplete on purpose. You don't explain the joke. You don't balance every structure. You let the reader meet you halfway.
+
+---
+
 ## Process
 
 1. Read the input text carefully
@@ -463,19 +501,28 @@ Run this check before approving ANY writing. LLMs will violate these rules even 
 ```
 [ ] No em dashes anywhere
 [ ] No rule of three (exactly 3 items in a list or 3 parallel phrases)
+[ ] No hidden threes in comma lists
 [ ] No negative parallelisms ("didn't X, needed Y" or "not just X, it's Y")
 [ ] No AI vocabulary (crucial, delve, landscape, pivotal, testament, vibrant, etc.)
 [ ] No -ing tacked-on phrases (ensuring, highlighting, showcasing)
 [ ] No "serves as" / "stands as" (use "is")
 [ ] No vague attributions (experts say, studies show)
 [ ] No sycophancy (Great question!, You're absolutely right!)
-[ ] NOT CHOPPY - flows when read aloud (MOST IMPORTANT)
+[ ] No over-clarifying ("which is exactly the point", "that's the key")
+[ ] No too-symmetrical parallels ("X in one, Y in another")
+[ ] NOT CHOPPY - flows when read aloud
 [ ] Has connective tissue (and, but, because, which, commas, clauses)
+[ ] Conversational, not instructional (talking WITH not AT)
+[ ] Leaves gaps - doesn't explain everything
 [ ] At least one specific number, name, or concrete detail
 [ ] Ending is specific, not generic positivity
 ```
 
-**CHOPPINESS IS THE #1 FAILURE MODE.** If the writing sounds like a telegram or bullet points converted to prose, it fails regardless of other checks passing.
+**TWO FAILURE MODES:**
+1. **Choppiness** - sounds like a telegram
+2. **Algorithmic completeness** - too balanced, too explained, too resolved
+
+Both make writing feel like AI. Flow matters, but so does incompleteness.
 
 If ANY box fails, rewrite that section and run the check again.
 
