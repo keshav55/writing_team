@@ -8,7 +8,7 @@ Based on [Wikipedia's Signs of AI writing](https://en.wikipedia.org/wiki/Wikiped
 
 **Claude Code (recommended):**
 ```bash
-git clone https://github.com/YOUR_USERNAME/writing_team.git ~/.claude/skills/writing_team
+git clone https://github.com/keshav55/writing_team.git ~/.claude/skills/writing_team
 ```
 
 **Manual:**

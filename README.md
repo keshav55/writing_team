@@ -16,7 +16,7 @@ A collection of Claude Code skills for writing tasks. Each skill does one job we
 ## Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/writing_team.git ~/.claude/skills/writing_team
+git clone https://github.com/keshav55/writing_team.git ~/.claude/skills/writing_team
 ```
 
 Or install individual skills:
