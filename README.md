@@ -38,7 +38,7 @@ Each skill does one job. Use them alone or chain them together.
 - Flags gaps instead of making things up
 
 **Copy-editor** reviews:
-- Detects 25 AI writing patterns
+- Detects 26 AI writing patterns
 - Rewrites problematic sections
 - Checks rhythm (no staccato overcorrection)
 - Runs pre-publish checklist

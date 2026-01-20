@@ -67,39 +67,41 @@ planner → writer → copy-editor
 
 | Section | Location |
 |---------|----------|
-| Frontmatter | `skills/planner/SKILL.md:1-9` |
-| Goal Clarification | `skills/planner/SKILL.md:25-33` |
-| Audience Analysis | `skills/planner/SKILL.md:35-42` |
-| Research Gathering | `skills/planner/SKILL.md:44-59` |
-| Outline Creation | `skills/planner/SKILL.md:61-85` |
-| Voice Definition | `skills/planner/SKILL.md:87-96` |
-| Output Format | `skills/planner/SKILL.md:100-120` |
+| Frontmatter | `skills/planner/SKILL.md:1-10` |
+| Phase 1: DISCOVER | `skills/planner/SKILL.md:22-56` |
+| Phase 2: IDENTIFY GAPS | `skills/planner/SKILL.md:59-89` |
+| Phase 3: DO THE RESEARCH | `skills/planner/SKILL.md:92-116` |
+| Phase 4: BUILD THE OUTLINE | `skills/planner/SKILL.md:119-150` |
+| Outputting the Plan | `skills/planner/SKILL.md:153-187` |
+| Examples | `skills/planner/SKILL.md:215-288` |
+| Handoff | `skills/planner/SKILL.md:302-314` |
 
 ### writer
 
 | Section | Location |
 |---------|----------|
-| Frontmatter | `skills/writer/SKILL.md:1-9` |
-| Voice Over Correctness | `skills/writer/SKILL.md:25-40` |
-| Rhythm Is Structure | `skills/writer/SKILL.md:42-55` |
-| Specificity | `skills/writer/SKILL.md:57-72` |
-| Openings | `skills/writer/SKILL.md:74-88` |
-| Endings | `skills/writer/SKILL.md:90-100` |
-| Process | `skills/writer/SKILL.md:104-140` |
+| Frontmatter | `skills/writer/SKILL.md:1-10` |
+| The Loop | `skills/writer/SKILL.md:22-33` |
+| Phase 1: SETUP | `skills/writer/SKILL.md:36-52` |
+| Phase 2: OPENING | `skills/writer/SKILL.md:55-93` |
+| Phase 3: FILL THE BODY | `skills/writer/SKILL.md:96-140` |
+| Phase 4: CLOSING | `skills/writer/SKILL.md:143-169` |
+| Key Principles | `skills/writer/SKILL.md:240-293` |
+| Handoff | `skills/writer/SKILL.md:308-319` |
 
 ### copy-editor
 
 | Section | Location |
 |---------|----------|
 | Frontmatter | `skills/copy-editor/SKILL.md:1-11` |
-| Personality & Soul | `skills/copy-editor/SKILL.md:29-59` |
+| Personality & Soul | `skills/copy-editor/SKILL.md:29-60` |
 | Content Patterns (1-6) | `skills/copy-editor/SKILL.md:63-146` |
 | Language Patterns (7-12) | `skills/copy-editor/SKILL.md:149-224` |
 | Style Patterns (13-18) | `skills/copy-editor/SKILL.md:227-304` |
 | Communication Patterns (19-21) | `skills/copy-editor/SKILL.md:307-346` |
 | Filler & Hedging (22-24) | `skills/copy-editor/SKILL.md:349-384` |
-| Rhythm Patterns (25) | `skills/copy-editor/SKILL.md:387-400` |
-| Pre-publish Checklist | `skills/copy-editor/SKILL.md:428-446` |
+| Rhythm Patterns (25-26) | `skills/copy-editor/SKILL.md:387-453` |
+| Pre-publish Checklist | `skills/copy-editor/SKILL.md:497-527` |
 
 ---
 
@@ -109,7 +111,7 @@ planner → writer → copy-editor
 |------|---------|
 | ⭐ `skills/planner/SKILL.md` | Outline and research skill |
 | ⭐ `skills/writer/SKILL.md` | Drafting skill with voice principles |
-| ⭐ `skills/copy-editor/SKILL.md` | 25 AI patterns + checklist |
+| ⭐ `skills/copy-editor/SKILL.md` | 26 AI patterns + checklist |
 | `README.md` | Project overview, installation |
 
 ---
