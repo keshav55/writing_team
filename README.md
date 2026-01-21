@@ -48,7 +48,9 @@ Each skill does one job. Use them alone or chain them together.
 
 **Full team:**
 ```bash
-git clone https://github.com/keshav55/writing_team.git ~/.claude/skills/writing_team
+git clone https://github.com/keshav55/writing_team.git /tmp/writing_team
+cp -r /tmp/writing_team/skills/* ~/.claude/skills/
+rm -rf /tmp/writing_team
 ```
 
 **Single skill:**
